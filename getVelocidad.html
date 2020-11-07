@@ -1,0 +1,51 @@
+<html>
+    <script>
+		
+		function getVelocidad(letraPedida) {
+			try {
+				letras = ["M", "N", "P", "Q", "R", "S", "T", "U", "H", "VR", "V", "ZR", "W", "Y"],
+				velocidades = [130, 140, 150, 160, 170, 180, 190, 200, 210, 211, 240, 241, 270, 300],
+				v = 0,
+				esValidoCaracter = false
+				letraPedida=letraPedida.toUpperCase()
+				
+				for (i = 0; i < letras.length; i++) {
+					if (letraPedida == letras[i]) {
+						v = velocidades[i]
+						esValidoCaracter = true
+					}
+				}
+				
+				if (!esValidoCaracter) {
+					throw(error)
+				}
+				
+			} catch (error) {
+				alert("e: el caracter introducido no es valido")
+			}
+			
+			return v
+		}
+		
+		//PROBADOR
+		///*
+		alert(getVelocidad("m"))
+		alert(getVelocidad("n"))
+		alert(getVelocidad("p"))
+		alert(getVelocidad("q"))
+		alert(getVelocidad("r"))
+		alert(getVelocidad("s"))
+		alert(getVelocidad("t"))
+		alert(getVelocidad("u"))
+		alert(getVelocidad("h"))
+		alert(getVelocidad("vr"))
+		alert(getVelocidad("v"))
+		alert(getVelocidad("zr"))
+		alert(getVelocidad("w"))
+		alert(getVelocidad("y"))
+		alert(getVelocidad(1))
+		alert(getVelocidad("1"))
+		//*/
+		
+	</script>
+</html>
